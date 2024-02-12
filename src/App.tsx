@@ -2,9 +2,9 @@ import { MouseEvent, useState } from 'react';
 import Button from './components/Button/Button';
 import Input from './components/Input/Input';
 // import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { Cart } from './pages/Cart/Cart';
-import { Menu } from './pages/Menu/Menu';
-import { Error } from './pages/Error/Error';
+// import { Cart } from './pages/Cart/Cart';
+// import { Menu } from './pages/Menu/Menu';
+// import { Error } from './pages/Error/Error';
 
 // const router = createBrowserRouter([
 // 	{
@@ -31,9 +31,9 @@ function App() {
 
 	return (
 		<>
-			<Input placeholder='ваш емаил'></Input>
+			{/* <Input placeholder='ваш емаил'></Input>
 			<Button onClick={addCounter}>Применить</Button>
-			<Button appearence='big' onClick={addCounter}>Вход</Button>
+			<Button appearence='big' onClick={addCounter}>Вход</Button> */}
 			{/* <div>
 
 				<Link to='/'>Меню</Link>
