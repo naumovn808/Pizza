@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Menu } from './pages/Menu/Menu.tsx';
 import { Cart } from './pages/Cart/Cart.tsx';
 import { Error } from './pages/Error/Error.tsx';
 import { Layout } from './components/Layout/Menu/Layout.tsx';
-// import { BrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
 	{
@@ -36,14 +34,7 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	// <React.StrictMode>
-	// 	<BrowserRouter>
-	// 		<App />
-	// 	</BrowserRouter>
-	// </React.StrictMode>
-
 	<React.StrictMode>
-		<App />
 		<RouterProvider router={router} />
 	</React.StrictMode>
 );
