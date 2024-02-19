@@ -11,7 +11,8 @@ function ProductCard(props: ProductCardProps) {
 
 	return (
 
-		<Link to={'/'} className={styles['link']}>
+	// <Link to={'/'} className={styles['link']}>
+		<Link to={`/product/${props.id}`} className={styles['link']}>
 
 			<div className={styles['card']}>
 
