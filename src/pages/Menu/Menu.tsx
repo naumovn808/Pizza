@@ -6,12 +6,14 @@ import { PREFIX } from '../../helpers/API';
 import { Product } from '../../interfaces/product.interface';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
+import { MenuList } from './MenuList/MenuList';
 
 export function Menu() {
 
 	const [products, setProducts] = useState<Product[]>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [error, setError] = useState<string | undefined>();
 
 	const getMenu = async () => {
 		try {
@@ -21,6 +23,7 @@ export function Menu() {
 			setIsLoading(false);
 		} catch (e) {
 			console.error(e);
+			if (e instanceof AxiosError) setError(e.message);
 			setIsLoading(false);
 			return;
 		}
@@ -72,6 +75,23 @@ export function Menu() {
 		</div>
 
 		<div>
+			<div>{error && <>{error}</>}</div>
+			{!isLoading && <MenuList products={products} />}
+			{isLoading && <>загружаем</>}
+		</div>
+
+	</>
+	);
+
+
+	return (<>
+		<div className={styles['head']}>
+			<Headling>Меню</Headling>;
+			<Search />
+		</div>
+
+		<div>
+			<div>{error && <>{error}</>}</div>
 			{!isLoading && products.map(p => (
 				<ProductCard
 					key={p.id}
@@ -90,3 +110,5 @@ export function Menu() {
 	</>
 	);
 }
+
+export default Menu;
