@@ -1,17 +1,3 @@
-// // import { useLoaderData, useParams } from 'react-router-dom';
-// import { Product } from '../../interfaces/product.interface';
-// import { useLoaderData } from 'react-router-dom';
-
-// export function Product() {
-// 	// const { id } = useParams();
-// 	const data = useLoaderData() as Product;
-
-// 	return <>
-// 		{/* Product - {id} */}
-// 		Product - {data.name}
-// 	</>;
-// }
-
 import { Await, useLoaderData } from 'react-router-dom';
 import { Product } from '../../interfaces/product.interface';
 import { Suspense } from 'react';

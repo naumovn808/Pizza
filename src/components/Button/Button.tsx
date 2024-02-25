@@ -1,15 +1,6 @@
+import styles from './Button.module.css';
 import { ButtonProps } from './Button.props';
 import cn from 'classnames';
-import styles from './Button.module.css';
-// import { FC } from 'react';
-
-
-// export const ButtonAlt: FC<ButtonProps> = ({ children, className, ...props }) => {
-//     return (
-//         <button className={cn("button accent", className)} {...props}>{children}</button>
-//     );
-// }
-
 
 function Button({ children, className, appearence = 'small', ...props }: ButtonProps) {
 	return (
@@ -19,6 +10,5 @@ function Button({ children, className, appearence = 'small', ...props }: ButtonP
 		})} {...props}>{children}</button>
 	);
 }
-
 
 export default Button;

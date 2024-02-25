@@ -4,7 +4,7 @@ import './index.css';
 import { RouterProvider, createBrowserRouter, defer } from 'react-router-dom';
 import { Cart } from './pages/Cart/Cart.tsx';
 import { Error as ErropPage } from './pages/Error/Error.tsx';
-import { Layout } from './components/Layout/Menu/Layout.tsx';
+import { Layout } from './layout/Menu/Layout.tsx';
 import { Product } from './pages/Product/Product.tsx';
 import axios from 'axios';
 import { PREFIX } from './helpers/API.ts';
